@@ -27,6 +27,7 @@ async function login(req, res, next) {
 
   const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '2h' });
   res.json({ token });
+  
 }
 
 async function getAll(req, res, next) {
